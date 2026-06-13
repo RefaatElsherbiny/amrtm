@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أمر تم — كل خدمات مناسبتك في مكان واحد</title>
+  <link rel="icon" type="image/png" href="https://halls.amrtm.com.sa/images/new-logo1.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purple:   { DEFAULT: '#9643B5', dark: '#7a2f9a', light: '#b05fcf' },
+            gold:     { DEFAULT: '#C4A44A', dark: '#a8892d', light: '#d4b96a' },
+            green:    { DEFAULT: '#0F3D24', light: '#e8f2ec' },
+          },
+          fontFamily: { cairo: ['Cairo', 'sans-serif'] },
+          boxShadow: {
+            nav:  'inset 50px 0 40px -25px rgba(0,0,0,.18), inset -50px 0 40px -25px rgba(0,0,0,.18), 0 2px 20px rgba(0,0,0,.25)',
+            card: '0 4px 24px rgba(150,67,181,.13)',
+            cardHov: '0 10px 36px rgba(150,67,181,.26)',
+          },
+        },
+      },
+    }
+  </script>
+
+ 
+ 
+</head>
+<body class="bg-white text-gray-800">
+
+
+    <header id="navbar" class="fixed top-0 right-0 left-0 z-50 bg-purple shadow-nav transition-all duration-300" style="height:68px;">
+    <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between gap-4">
+
+
+      <a href="/" class="flex items-center gap-2.5 shrink-0">
+        <img src="https://halls.amrtm.com.sa/images/new-logo1.png" alt="أمر تم" class="h-14 brightness-0 invert" />
+      </a>
+
+
+      <nav class="hidden lg:flex items-center gap-1">
+        <a href="/" class="px-4 py-2 rounded-lg text-sm font-bold text-white/80 hover:bg-white/10 hover:text-white transition-all">الرئيسية</a>
+        <a href="" class="px-4 py-2 rounded-lg text-sm font-bold text-white/80 hover:bg-white/10 hover:text-white transition-all">الخدمات</a>
+        <a href="" class="px-4 py-2 rounded-lg text-sm font-bold text-white/80 hover:bg-white/10 hover:text-white transition-all">المأذون الشرعي</a>
+        <a href="" class="px-4 py-2 rounded-lg text-sm font-bold text-white/80 hover:bg-white/10 hover:text-white transition-all">حجز القاعات</a>
+        <a href="#about" class="px-4 py-2 rounded-lg text-sm font-bold text-white/80 hover:bg-white/10 hover:text-white transition-all">عن الخدمة</a>
+      </nav>
+
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="">
+          <button class="px-5 py-2 rounded-lg text-sm font-bold border border-white/30 text-white hover:border-gold hover:text-gold transition-all">تسجيل الدخول</button>
+        </a>
+        <a href="">
+          <button class="px-5 py-2 rounded-lg text-sm font-bold bg-gold text-white hover:bg-gold-light transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 transform">تواصل معنا</button>
+        </a>
+      </div>
+
+
+      <button id="burger" class="lg:hidden text-white text-2xl focus:outline-none" aria-label="القائمة">
+        <i class="fas fa-bars" id="burger-icon"></i>
+      </button>
+    </div>
+
+
+    <div id="mobile-menu" class="lg:hidden max-h-0 opacity-0 overflow-hidden bg-purple-dark transition-all duration-300">
+      <div class="flex flex-col px-6 py-4 gap-2">
+        <a href="/" class="py-2.5 text-sm font-bold text-white/80 border-b border-white/10 hover:text-gold transition-colors">الرئيسية</a>
+        <a href="" class="py-2.5 text-sm font-bold text-white/80 border-b border-white/10 hover:text-gold transition-colors">الخدمات</a>
+        <a href="" class="py-2.5 text-sm font-bold text-white/80 border-b border-white/10 hover:text-gold transition-colors">المأذون الشرعي</a>
+        <a href="" class="py-2.5 text-sm font-bold text-white/80 border-b border-white/10 hover:text-gold transition-colors">حجز القاعات</a>
+        <div class="flex gap-3 pt-3">
+          <a href="" class="flex-1">
+            <button class="w-full py-2.5 rounded-lg text-sm font-bold border border-white/30 text-white">تسجيل الدخول</button>
+          </a>
+          <a href="" class="flex-1">
+            <button class="w-full py-2.5 rounded-lg text-sm font-bold bg-gold text-white">تواصل معنا</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section 
+        id="hero"
+        class="min-h-screen flex flex-col items-center justify-start pt-28 pb-10 px-4 relative overflow-hidden"
+        style="
+            background:
+            linear-gradient(180deg, rgba(15,61,36,.92) 0%, rgba(15,61,36,.75) 35%, rgba(255,255,255,1) 100%),
+            url('https://halls.amrtm.com.sa/images/officiant.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+        "
+        >
+
+  <div class="hero-overlay absolute inset-0 z-0 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-0.5 z-10 pointer-events-none"
+         style="background:linear-gradient(to left,transparent,#C4A44A,transparent)"></div>
+
+
+    <div class="relative z-10 w-full max-w-5xl flex flex-col items-center text-center gap-6 mb-10">
+
+      <div class="inline-flex items-center gap-2 bg-gold/10 border border-gold/40 text-gold text-xs font-extrabold rounded-full px-5 py-2 reveal">
+        <i class="fas fa-star text-gold text-[10px]"></i>
+        منصة المناسبات الأولى في المملكة
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-white reveal" style="transition-delay:.08s">
+        كل خدمات مناسبتك<br>
+        <span class="shimmer-gold">في مكان واحد</span>
+      </h1>
+
+      <p class="text-base sm:text-lg font-bold text-white/85 max-w-2xl leading-relaxed reveal" style="transition-delay:.14s">
+        تُمكّن منصة المناسبات المستفيدين من الوصول بسرعة إلى القاعات المتاحة وفق التاريخ المطلوب،
+        مع إمكانية المقارنة والحجز بكل سهولة.
+      </p>
+
+      <a href=""
+         class="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-white text-base font-extrabold px-9 py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-200 reveal"
+         style="transition-delay:.2s">
+        <i class="fas fa-search"></i>
+        ابحث عن قاعتك الآن
+        <i class="fas fa-arrow-left text-sm opacity-70"></i>
+      </a>
+    </div>
+
+
+    <div id="search-bar" class="bg-white rounded-3xl shadow-2xl px-5 py-4 w-full max-w-6xl relative z-10">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 items-end">
+
+        <!-- Country -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-extrabold text-gray-500 text-right">الدولة</label>
+          <div class="relative">
+            <select class="w-full h-10 pr-3 pl-8 border border-gray-200 rounded-xl text-[12px] font-bold bg-gray-50 text-gray-700 focus:outline-none appearance-none">
+              <option>جميع الدول</option>
+              <option>المملكة العربية السعودية</option>
+            </select>
+            <i class="fas fa-chevron-down absolute left-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 pointer-events-none"></i>
+          </div>
+        </div>
+
+        <!-- City -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-extrabold text-gray-500 text-right">المدينة</label>
+          <div class="relative">
+            <select class="w-full h-10 pr-3 pl-8 border border-gray-200 rounded-xl text-[12px] font-bold bg-gray-50 appearance-none">
+              <option>جميع المدن</option>
+              <option>الرياض</option>
+              <option>جدة</option>
+              <option>مكة المكرمة</option>
+              <option>المدينة المنورة</option>
+              <option>الدمام</option>
+            </select>
+            <i class="fas fa-chevron-down absolute left-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 pointer-events-none"></i>
+          </div>
+        </div>
+
+        <!-- Type -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-extrabold text-gray-500 text-right">نوع القاعة</label>
+          <div class="relative">
+            <select class="w-full h-10 pr-3 pl-8 border border-gray-200 rounded-xl text-[12px] font-bold bg-gray-50 appearance-none">
+              <option>جميع الأنواع</option>
+              <option>قاعات المناسبات</option>
+              <option>الاستراحات</option>
+              <option>الشاليهات</option>
+              <option>قاعات المحاضرات</option>
+            </select>
+            <i class="fas fa-chevron-down absolute left-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 pointer-events-none"></i>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-extrabold text-gray-500 text-right">السعر</label>
+          <div class="relative">
+            <select class="w-full h-10 pr-3 pl-8 border border-gray-200 rounded-xl text-[12px] font-bold bg-gray-50 appearance-none">
+              <option>جميع الأسعار</option>
+              <option>أقل من 1000 ريال</option>
+              <option>1000 - 3000 ريال</option>
+              <option>3000 - 6000 ريال</option>
+              <option>أكثر من 6000 ريال</option>
+            </select>
+            <i class="fas fa-chevron-down absolute left-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 pointer-events-none"></i>
+          </div>
+        </div>
+
+        <!-- Sort -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-extrabold text-gray-500 text-right">الترتيب</label>
+          <div class="relative">
+            <select class="w-full h-10 pr-3 pl-8 border border-gray-200 rounded-xl text-[12px] font-bold bg-gray-50 appearance-none">
+              <option>الأحدث أولاً</option>
+              <option>الأرخص أولاً</option>
+              <option>الأعلى تقييماً</option>
+            </select>
+            <i class="fas fa-chevron-down absolute left-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 pointer-events-none"></i>
+          </div>
+        </div>
+
+        <!-- Date -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-extrabold text-gray-500 text-right">تاريخ الوفرة</label>
+          <div class="relative">
+            <input id="date-input" type="date"
+              class="w-full h-10 pr-3 pl-8 border border-gray-200 rounded-xl text-[12px] font-bold bg-gray-50" />
+            <i class="fas fa-calendar-alt absolute left-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 pointer-events-none"></i>
+          </div>
+        </div>
+
+        <!-- Reset -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-extrabold text-gray-500 text-right">التحكم</label>
+          <button id="reset-btn"
+            class="h-10 rounded-xl border border-purple-200 text-purple text-[12px] font-black hover:bg-purple hover:text-white transition flex items-center justify-center gap-2">
+            <i class="fas fa-redo-alt"></i>
+            إعادة تعيين
+          </button>
+        </div>
+
+        <!-- Mazon -->
+        <div class="flex flex-col gap-1">
+          <label class="text-[11px] font-extrabold text-gray-500 text-right">خدمة</label>
+          <a href=""
+             class="h-10 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md hover:shadow-xl transition flex items-center justify-center gap-2">
+            <span class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
+              <i class="fas fa-user-tie text-xs"></i>
+            </span>
+            <span class="text-[11px] font-black leading-tight">
+              المأذون الشرعي<br>لإتمام عقود النكاح
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 w-full max-w-5xl mt-10 reveal relative z-10" style="transition-delay:.26s">
+
+      <a href=""
+         class="bg-white border border-purple/20 rounded-2xl p-6 flex flex-col items-center text-center lift shadow-card hover:shadow-cardHov hover:border-purple/50 group">
+        <div class="w-16 h-16 rounded-2xl bg-purple/10 flex items-center justify-center mb-4 group-hover:bg-purple/20 transition-colors">
+          <i class="fas fa-building text-2xl text-gold"></i>
+        </div>
+        <h3 class="text-sm font-extrabold text-green mb-1.5">حجز قاعات المناسبات</h3>
+        <p class="text-[11.5px] text-gray-500 leading-relaxed">أجمل القاعات لحفلات الأفراح والمناسبات الخاصة</p>
+      </a>
+
+      <a href=""
+         class="bg-white border border-purple/20 rounded-2xl p-6 flex flex-col items-center text-center lift shadow-card hover:shadow-cardHov hover:border-purple/50 group">
+        <div class="w-16 h-16 rounded-2xl bg-purple/10 flex items-center justify-center mb-4 group-hover:bg-purple/20 transition-colors">
+          <i class="fas fa-tree text-2xl text-gold"></i>
+        </div>
+        <h3 class="text-sm font-extrabold text-green mb-1.5">حجز الاستراحات</h3>
+        <p class="text-[11.5px] text-gray-500 leading-relaxed">أفضل الاستراحات المجهزة لمناسباتك الخاصة</p>
+      </a>
+
+      <a href=""
+         class="bg-white border border-purple/20 rounded-2xl p-6 flex flex-col items-center text-center lift shadow-card hover:shadow-cardHov hover:border-purple/50 group">
+        <div class="w-16 h-16 rounded-2xl bg-purple/10 flex items-center justify-center mb-4 group-hover:bg-purple/20 transition-colors">
+          <i class="fas fa-umbrella-beach text-2xl text-gold"></i>
+        </div>
+        <h3 class="text-sm font-extrabold text-green mb-1.5">حجز الشاليهات</h3>
+        <p class="text-[11.5px] text-gray-500 leading-relaxed">شاليهات مميزة لأفضل تجربة في مناسباتك</p>
+      </a>
+
+      <a href=""
+         class="bg-white border border-purple/20 rounded-2xl p-6 flex flex-col items-center text-center lift shadow-card hover:shadow-cardHov hover:border-purple/50 group">
+        <div class="w-16 h-16 rounded-2xl bg-purple/10 flex items-center justify-center mb-4 group-hover:bg-purple/20 transition-colors">
+          <i class="fas fa-chalkboard-teacher text-2xl text-gold"></i>
+        </div>
+        <h3 class="text-sm font-extrabold text-green mb-1.5">قاعات الاجتماعات والتدريب</h3>
+        <p class="text-[11.5px] text-gray-500 leading-relaxed">فعاليات تعليمية ومؤتمرات مهنية بتجهيز كامل</p>
+      </a>
+    </div>
+
+
+    <div class="flex flex-wrap justify-center gap-2 w-full max-w-5xl mt-6 reveal relative z-10" style="transition-delay:.32s" id="support-strip">
+
+    </div>
+
+  </section>
+
+
+  <section class="relative overflow-hidden py-20 px-4" style="background:linear-gradient(135deg,#0F3D24 0%,#0a2a18 100%)">
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 50%,rgba(196,164,74,.07),transparent 60%)"></div>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden reveal"
+         style="background:rgba(196,164,74,.18)">
+
+      <div class="bg-green/90 hover:bg-green transition-colors py-12 px-6 text-center group">
+        <i class="fas fa-building text-gold/40 text-lg mb-4 block group-hover:text-gold/70 transition-colors"></i>
+        <div class="text-5xl font-black text-gold leading-none mb-2 counter" data-target="1200">0</div>
+        <div class="text-sm text-white/60 font-semibold">قاعة مسجلة</div>
+      </div>
+
+      <div class="bg-green/90 hover:bg-green transition-colors py-12 px-6 text-center group">
+        <i class="fas fa-calendar-check text-gold/40 text-lg mb-4 block group-hover:text-gold/70 transition-colors"></i>
+        <div class="text-5xl font-black text-gold leading-none mb-2 counter" data-target="8500">0</div>
+        <div class="text-sm text-white/60 font-semibold">حجز ناجح</div>
+      </div>
+
+      <div class="bg-green/90 hover:bg-green transition-colors py-12 px-6 text-center group">
+        <i class="fas fa-map-marker-alt text-gold/40 text-lg mb-4 block group-hover:text-gold/70 transition-colors"></i>
+        <div class="text-5xl font-black text-gold leading-none mb-2 counter" data-target="24">0</div>
+        <div class="text-sm text-white/60 font-semibold">مدينة مغطاة</div>
+      </div>
+
+      <div class="bg-green/90 hover:bg-green transition-colors py-12 px-6 text-center group">
+        <i class="fas fa-star text-gold/40 text-lg mb-4 block group-hover:text-gold/70 transition-colors"></i>
+        <div class="text-5xl font-black text-gold leading-none mb-2"><span class="counter" data-target="98">0</span>%</div>
+        <div class="text-sm text-white/60 font-semibold">رضا العملاء</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="py-20 px-4 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block bg-gold/10 border border-gold/30 text-yellow-700 text-[11px] font-extrabold rounded-full px-5 py-1.5 mb-3 tracking-widest uppercase">خدمات الدعم</span>
+        <h2 class="text-3xl lg:text-4xl font-black text-green mb-3">كل ما تحتاجه لمناسبتك</h2>
+        <p class="text-sm text-gray-500 max-w-md mx-auto leading-relaxed">من الضيافة إلى التصوير، نوفر لك جميع الخدمات المساندة تحت سقف واحد</p>
+      </div>
+
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 reveal" id="support-grid">
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="py-20 px-4 bg-white" id="about">
+    <div class="max-w-5xl mx-auto">
+      <div class="rounded-3xl overflow-hidden border border-gray-100 shadow-xl grid md:grid-cols-3 reveal" style="min-height:260px">
+
+        <!-- Icon col -->
+        <div class="bg-amber-50 flex items-center justify-center p-8 md:p-0">
+          <img src="https://halls.amrtm.com.sa/images/new-logo1.png" alt="أمر تم"
+               class="h-28 md:h-full md:w-full object-contain p-8"
+               style="filter:drop-shadow(0 4px 20px rgba(15,61,36,.15))" />
+        </div>
+
+        <!-- Content -->
+        <div class="bg-white p-8 lg:p-10 flex flex-col justify-center">
+          <span class="inline-block bg-green-light border border-gray-200 text-green text-[11px] font-extrabold rounded-full px-4 py-1 mb-4 w-fit">خدمة مميزة</span>
+          <h2 class="text-2xl lg:text-3xl font-black text-green mb-2 leading-snug">المأذون الشرعي</h2>
+          <p class="text-sm text-gray-500 leading-relaxed mb-5">نوفر لك مأذونين شرعيين معتمدين لإتمام عقود النكاح بكل يسر وسهولة وفق الأنظمة المعتمدة.</p>
+
+          <ul class="flex flex-col gap-2.5 mb-7">
+            <li class="flex items-center gap-2.5 text-sm font-semibold text-gray-700">
+              <i class="fas fa-check-circle text-green text-sm shrink-0"></i>
+              مأذونون معتمدون من الجهات الرسمية
+            </li>
+            <li class="flex items-center gap-2.5 text-sm font-semibold text-gray-700">
+              <i class="fas fa-check-circle text-green text-sm shrink-0"></i>
+              إتمام العقد في موقع المناسبة
+            </li>
+            <li class="flex items-center gap-2.5 text-sm font-semibold text-gray-700">
+              <i class="fas fa-check-circle text-green text-sm shrink-0"></i>
+              توثيق رسمي وفق الأنظمة
+            </li>
+          </ul>
+
+          <a href="">
+            <button class="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-white text-sm font-extrabold px-6 py-3 rounded-xl shadow-md hover:-translate-y-0.5 transform transition-all">
+              <i class="fas fa-user-tie"></i>
+              احجز المأذون الآن
+            </button>
+          </a>
+        </div>
+
+        <!-- Photo -->
+        <div class="relative overflow-hidden min-h-48 md:min-h-0 hidden md:block"
+             style="background:url('https://halls.amrtm.com.sa/images/officiant.jpg') center top/cover no-repeat">
+          <div class="absolute inset-0"
+               style="background:linear-gradient(to left,transparent 40%,rgba(255,255,255,.9) 100%)"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="relative overflow-hidden bg-gradient-to-br from-purple-950 via-purple-900 to-indigo-950 text-white">
+
+    <div class="absolute inset-0">
+      <div class="absolute -top-24 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-24 right-1/4 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-xl shadow-yellow-500/20">
+              <img src="https://halls.amrtm.com.sa/images/new-logo1.png" alt="أمر تم" class="h-9" />
+            </div>
+            <h2 class="text-2xl font-black">
+              <span class="text-yellow-400">أمر تم</span>
+            </h2>
+          </div>
+
+          <p class="text-sm leading-7 text-white/60 max-w-md">
+            منصة رقمية احترافية تساعدك على إدارة أعمالك بسهولة وسرعة مع تجربة مستخدم عصرية.
+          </p>
+
+          <div class="flex gap-3 mt-6">
+            <a href="#" class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur flex items-center justify-center hover:bg-yellow-400 hover:text-purple-900 transition-all duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-yellow-400 hover:text-purple-900 transition-all duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center hover:bg-yellow-400 hover:text-purple-900 transition-all duration-300">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h3 class="font-bold text-yellow-400 mb-5">روابط</h3>
+          <ul class="space-y-3 text-sm text-white/60">
+            <li><a href="/" class="hover:text-yellow-400 transition">الرئيسية</a></li>
+            <li><a href="#about" class="hover:text-yellow-400 transition">من نحن</a></li>
+            <li><a href="https://halls.amrtm.com.sa/halls_list" class="hover:text-yellow-400 transition">الخدمات</a></li>
+            <li><a href="https://halls.amrtm.com.sa/contact" class="hover:text-yellow-400 transition">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="font-bold text-yellow-400 mb-5">تواصل</h3>
+          <div class="space-y-4 text-sm text-white/60">
+            <p class="flex gap-3 items-center"><i class="fas fa-envelope text-yellow-400"></i> info@example.com</p>
+            <p class="flex gap-3 items-center"><i class="fas fa-phone text-yellow-400"></i> +20 000 000 000</p>
+            <p class="flex gap-3 items-center"><i class="fas fa-location-dot text-yellow-400"></i> Egypt</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom -->
+      <div class="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/40">
+        <p>© 2026 <span class="text-yellow-400 font-bold">أمر تم</span> جميع الحقوق محفوظة</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-yellow-400">الخصوصية</a>
+          <a href="#" class="hover:text-yellow-400">الشروط</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const services = [
+      { icon:'fa-coffee',           label:'التمور والقهوة' },
+      { icon:'fa-cookie-bite',      label:'الحلويات والشكولاتة' },
+      { icon:'fa-gem',              label:'الذهب والمجوهرات' },
+      { icon:'fa-drum',             label:'بروتوكولات زفة العرسان' },
+      { icon:'fa-utensils',         label:'بوفيه مفتوحة' },
+      { icon:'fa-camera',           label:'تصوير وفتاح المناسبة' },
+      { icon:'fa-concierge-bell',   label:'تقديمات الضيافة' },
+      { icon:'fa-hands-helping',    label:'جمعيات حفظ النعمة' },
+      { icon:'fa-shield-alt',       label:'حراسات وتنظيم مسارات' },
+      { icon:'fa-money-check-alt',  label:'خدمات صناديق الحوالات' },
+      { icon:'fa-car-side',         label:'فالية (valet)' },
+      { icon:'fa-music',            label:'فرق غنائية وأهازيج تراثية' },
+      { icon:'fa-users',            label:'مجحى العرضات' },
+      { icon:'fa-spa',              label:'مراكز التجميل (الكوفيرات)' },
+      { icon:'fa-paint-brush',      label:'مصممو جرافيكس' },
+      { icon:'fa-microphone',       label:'مقدمو الاحتفالات' },
+      { icon:'fa-handshake',        label:'منسقو الاستقبال' },
+      { icon:'fa-ring',             label:'منصة العروس (كوشة)' },
+      { icon:'fa-female',           label:'وصيفة العروس' },
+    ];
+
+    function buildSupportItem(s, href = '#') {
+      return `<a href="${href}"
+        class="bg-white/95 border border-purple/25 rounded-xl py-3.5 px-2 flex flex-col items-center gap-1.5 text-center
+               hover:bg-white hover:border-gold hover:-translate-y-1 hover:shadow-lg transition-all duration-200 cursor-pointer">
+        <i class="fas ${s.icon} text-lg text-gold"></i>
+        <span class="text-[10px] font-bold text-gray-700 leading-snug block">${s.label}</span>
+      </a>`;
+    }
+
+    document.getElementById('support-strip').innerHTML = services.slice(0, 9).map(s => buildSupportItem(s)).join('');
+
+    document.getElementById('support-grid').innerHTML = services.map(s =>
+      `<a href="#"
+          class="bg-white border border-gray-100 rounded-xl py-4 px-2 flex flex-col items-center gap-2 text-center
+                 hover:border-green hover:bg-green-light hover:-translate-y-1 hover:shadow-md transition-all duration-200 cursor-pointer lift">
+        <i class="fas ${s.icon} text-xl text-gold"></i>
+        <span class="text-[11px] font-bold text-gray-600 leading-snug block">${s.label}</span>
+      </a>`
+    ).join('');
+
+ 
+    const burger = document.getElementById('burger');
+    const menu   = document.getElementById('mobile-menu');
+    const icon   = document.getElementById('burger-icon');
+    let open = false;
+    burger.addEventListener('click', () => {
+      open = !open;
+      menu.style.maxHeight = open ? menu.scrollHeight + 'px' : '0';
+      menu.style.opacity   = open ? '1' : '0';
+      icon.className = open ? 'fas fa-times' : 'fas fa-bars';
+    });
+
+
+    document.getElementById('reset-btn').addEventListener('click', () => {
+      document.querySelectorAll('#search-bar select').forEach(s => s.selectedIndex = 0);
+      document.getElementById('date-input').value = '';
+    });
+
+
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    reveals.forEach(r => revealObserver.observe(r));
+
+
+    function animateCounter(el) {
+      const target = +el.dataset.target;
+      const duration = 1600;
+      const step = target / (duration / 16);
+      let current = 0;
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = Math.floor(current).toLocaleString('ar');
+        if (current >= target) {
+          el.textContent = target.toLocaleString('ar');
+          el.classList.add('counter-done');
+          clearInterval(timer);
+        }
+      }, 16);
+    }
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animateCounter(e.target);
+          counterObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.counter').forEach(c => counterObserver.observe(c));
+
+     window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.style.height = window.scrollY > 40 ? '56px' : '68px';
+    });
+  </script>
+
+</body>
+</html>
